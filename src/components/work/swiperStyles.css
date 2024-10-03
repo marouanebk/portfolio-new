@@ -1,0 +1,97 @@
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    /* width: 700px !important; */
+    height: 410px !important;
+    margin-block: 1rem;
+}
+
+/* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+    background-color: white !important;
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+    background-color: white !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: rgb(255, 255, 255) !important;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.581) 0%,
+        rgba(255, 255, 255, 0.089) 100%
+    ) !important;
+    cursor: pointer;
+    width: 5.5rem !important;
+    height: 5.5rem !important;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.swiper-button-prev {
+    left: 24% !important;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next {
+    right: 24% !important;
+    transform: translateY(-50%);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: white;
+    width: fit-content !important;
+    height: fit-content !important;
+    font-size: 33px !important;
+}
+
+@media (max-width: 1030px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+}
+@media (min-width: 1030px) {
+    .swiper-button-prev {
+        left: 12% !important;
+    }
+
+    .swiper-button-next {
+        right: 12% !important;
+    }
+}
+@media (min-width: 1300px) {
+    .swiper-button-prev {
+        left: 19% !important;
+    }
+
+    .swiper-button-next {
+        right: 19% !important;
+    }
+}
+
+@media (min-width: 1900px) {
+    .swiper-button-prev {
+        left: 28% !important;
+    }
+
+    .swiper-button-next {
+        right: 28% !important;
+    }
+}

@@ -1,0 +1,19 @@
+:root {
+    --color-dark: #111111;
+}
+
+.inner .slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-dark);
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
+}
+
+@media (min-width: 1024px) {
+   .inner .slide {
+    z-index: 3;
+   } 
+}

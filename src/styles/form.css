@@ -1,0 +1,115 @@
+.form-component {
+    cursor: none;
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2e2e2e;
+}
+
+.title {
+    font-size: 96px;
+}
+
+/* .title img {
+    width: 70px;
+    height: 70px;
+} */
+
+/* .cursor {
+    background-color: #111;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  } */
+
+.cursor {
+    background: linear-gradient(140.99deg, #d7a3ff 0%, #ac42ff 100%);
+    height: 162px;
+    width: 162px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 5rem;
+    }
+    .cursor {
+        display: none;
+    }
+}
+
+/* When the screen width is 480px or less, decrease the font size even more */
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+.myForm input,
+.myForm textarea {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* .slide {
+    animation: slideIn 2s forwards;
+} */
+
+.slide-container {
+    position: relative;
+    height: 100vh; /* Ensure container's height matches viewport */
+}
+
+.form-animation,
+.second-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    cursor: pointer;
+}
+.text-stroke {
+    color: transparent; /* Make the text color transparent */
+    -webkit-text-stroke: 1px white; /* Set the width and color of the outline */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: 0.7s;
+}
+
+.title:hover .text-stroke {
+    -webkit-text-stroke: 0px transparent; /* Set the width and color of the outline */
+    -webkit-text-fill-color: transparent;
+    background-color: #ac42ff;
+}

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
+    margin: 0;
+}
+
+p {
+    font-weight: 400;
+    size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Kalnia", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.intro {
+    position: relative;
+}
+
+.intro--main-pic {
+    position: absolute;
+    bottom: 0;
+    z-index: -10;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.into--custom-height {
+    min-height: calc(100dvh - 56px);
+}
+
+.border-gradient {
+    border-image: linear-gradient(140.99deg, #d7a3ff 0%, #ac42ff 100%);
+    border-image-slice: 1;
+}
+
+.gradient-text-purple {
+    background: linear-gradient(140.99deg, #d7a3ff 0%, #ac42ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-border-purple {
+    background: linear-gradient(140.99deg, #d7a3ff 0%, #ac42ff 100%);
+}
+
+.intro--scroll-down {
+    position: absolute;
+    left: 10%;
+    bottom: 87px;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    width: 200px;
+    border-bottom: 2px solid;
+}
+
+.relative .group:hover .bg-grayText {
+    background-color: #8b5cf6; /* Purple color */
+}
+
+.border-linearWhiteStroke {
+    border: 1px solid white;
+    position: relative;
+    border-radius: 7px;
+}
+
+/* 
+background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+*/
+
+#canvas {
+    height: 100vh;
+}
+
+/* #canvas {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 50vw !important;
+    height: calc(100vh - 63px) !important;
+    z-index: -1;
+}
+@media (max-width: 640px) {
+    #canvas {
+        display: none;
+    }
+}
+@media (min-width: 640px) {
+    #canvas {
+        display: block;
+        width: 100vw !important;
+        height: calc(100vh - 63px) !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    #canvas {
+        display: block;
+        width: 100vw !important;
+        height: calc(100vh - 63px) !important;
+    }
+} */
