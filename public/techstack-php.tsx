@@ -21,7 +21,8 @@ export function PHPSVG() {
                 fill="url(#paint2_linear_79_318)"
             />
             <defs>
-                <linearGradient
+                {/* background */}
+                 <linearGradient
                     id="paint0_linear_79_318"
                     x1="0.5"
                     y1="0"
@@ -31,7 +32,8 @@ export function PHPSVG() {
                 >
                     <stop stop-color="#2E2E2E" />
                     <stop offset="0.811667" stop-color="#222222" />
-                </linearGradient>
+                </linearGradient> 
+                {/* border */}
                 <linearGradient
                     id="paint1_linear_79_318"
                     x1="0.5"
@@ -45,10 +47,10 @@ export function PHPSVG() {
                 </linearGradient>
                 <linearGradient
                     id="paint2_linear_79_318"
-                    x1="15.5"
-                    y1="28"
-                    x2="21.7481"
-                    y2="51.6922"
+                    // x1="15.5"
+                    // y1="28"
+                    // x2="21.7481"
+                    // y2="51.6922"
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop stop-color="white" />
