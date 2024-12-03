@@ -113,6 +113,7 @@ import dynamic from "next/dynamic"
 import { easeInOut, easeOut, motion } from "framer-motion"
 import Image from "next/image"
 import Navbar from "../navbar"  // Import Navbar here
+import { GithubContactSVG } from "../../../public/icon-techstack/contact-github"
 
 export default function Intro() {
     const opacitySun1 = {
@@ -145,8 +146,24 @@ export default function Intro() {
         },
     }
 
+    
+
     return (
-        <div className="intro flex items-center justify-center relative min-h-screen w-full">
+        
+        
+        <div className="intro flex items-center justify-center relative min-h-screen w-full scroll-snap-start">
+
+<style jsx>{`
+        .svg-icon {
+          transition: filter 0.3s ease, transform 0.3s ease;
+          filter: brightness(1); /* Normal state */
+        }
+
+        .svg-icon:hover {
+          filter: brightness(1.5) saturate(1.8) hue-rotate(45deg);
+          transform: scale(1.1); /* Optional scaling for better UX */
+        }
+      `}</style>
             <Navbar />  {/* Include Navbar here */}
             <article className="w-full h-full flex flex-col lg:flex-row gap-5 items-center justify-between my-24 md:my-48 pt-20"> {/* Added pt-20 to make space for fixed Navbar */}
                 <div className="basis-1/3 w-lg max-w-lg flex flex-col gap-4 lg:gap-7 items-center lg:items-start">
@@ -156,10 +173,11 @@ export default function Intro() {
                     <div className="h-2 w-11 bg-gradientPurple rounded"></div>
 
                     <div className="flex items-center justify-start gap-3">
-                        <img src="/github-icon.svg" alt="" />
-                        <img src="/email-icon.svg" alt="" />
-                        <img src="/facebook-icon.svg" alt="" />
-                        <img src="/instagram-icon.svg" alt="" />
+                    <GithubContactSVG />
+                        <img className="svg-icon"  src="/github-icon.svg" alt="" />
+                        <img className="svg-icon" src="/email-icon.svg" alt="" />
+                        <img className="svg-icon" src="/facebook-icon.svg" alt="" />
+                        <img className="svg-icon" src="/instagram-icon.svg" alt="" />
                     </div>
                 </div>
 

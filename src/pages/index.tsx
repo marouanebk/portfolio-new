@@ -28,20 +28,35 @@ const sections = [
     },
     { id: "about", component: <About /> },
     // { id: "slider", component: <Slider /> },
-    { id: "work", component: <Work /> },
-    { id: "techIUse", component: <TechIUse /> },
-    { id: "returns", component: <Returns /> },
-    { id: "form", component: <Form /> },
+    // { id: "work", component: <Work /> },
+    // { id: "techIUse", component: <TechIUse /> },
+    // { id: "returns", component: <Returns /> },
+    // { id: "form", component: <Form /> },
 ]
 
 function Home() {
     return (
-        <main className="h-screen overflow-y-scroll overflow-x-hidden">
+        <main className="h-screen overflow-y-scroll overflow-x-hidden scroll-snap-y-mandatory">
             {sections.map((section) => (
-                <section key={section.id}>
+                <section
+                    key={section.id}
+                    className="scroll-snap-start h-screen"
+                >
                     {section.component}
                 </section>
             ))}
         </main>
-    )
+    );
 }
+
+// function Home() {
+//     return (
+//         <main className="h-screen overflow-y-scroll overflow-x-hidden">
+//             {sections.map((section) => (
+//                 <section key={section.id}>
+//                     {section.component}
+//                 </section>
+//             ))}
+//         </main>
+//     )
+// }

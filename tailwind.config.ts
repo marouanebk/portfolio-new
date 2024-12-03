@@ -8,6 +8,12 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            scrollSnapType: {
+                mandatory: "y mandatory",
+            },
+            scrollSnapAlign: {
+                start: "start",
+            },
             fontFamily: {
                 kalnia: "Kalnia, serif",
                 Dosis: "Dosis, sans-serif",
