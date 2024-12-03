@@ -11,9 +11,12 @@ import { EffectCoverflow, Navigation, Pagination } from "swiper/modules"
 import Image from "next/image"
 import Link from "next/link"
 import { projectsData } from "./projectsData"
+import Inner from "../Layout/Inner"
 
 export function Work() {
     return (
+        <Inner>
+            
         <div className="pt-64 py-20 text-white">
             <header>
                 <h1 className="text-center text-4xl mb-2">Portfolio</h1>
@@ -42,11 +45,11 @@ export function Work() {
                     modules={[EffectCoverflow, Pagination, Navigation]}
                     navigation
                     className="h-[400px] md:h-[493px] "
-                >
+                    >
                     {projectsData.map((project) => (
                         <SwiperSlide
-                            key={project.id}
-                            className="max-h-[250px] md:max-h-[493px] max-w-[80%] md:max-w-[700px]"
+                        key={project.id}
+                        className="max-h-[250px] md:max-h-[493px] max-w-[80%] md:max-w-[700px]"
                         >
                             <Link href={`/project-details/${project.id}`}>
                                 <div
@@ -55,7 +58,7 @@ export function Work() {
                                         objectFit: "cover",
                                     }}
                                     className=" h-full rounded-2xl bg-slate-900"
-                                >
+                                    >
                                     <div>
                                         <div className="flex items-center justify-center gap-3 p-4">
                                             <Image
@@ -63,19 +66,19 @@ export function Work() {
                                                 width={45}
                                                 height={45}
                                                 alt=""
-                                            />
+                                                />
                                             <Image
                                                 src="git.svg"
                                                 width={45}
                                                 height={45}
                                                 alt=""
-                                            />
+                                                />
                                             <Image
                                                 width={45}
                                                 height={45}
                                                 src="github.svg"
                                                 alt=""
-                                            />
+                                                />
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +92,7 @@ export function Work() {
                                     duration: 0.3,
                                 }}
                                 className="text-xl text-center my-3"
-                            >
+                                >
                                 Lorem ipsut amet, consectetur adipisicing elit.
                                 Harum, quam?
                             </motion.h3>
@@ -98,5 +101,6 @@ export function Work() {
                 </Swiper>
             </main>
         </div>
+                    </Inner>
     )
 }

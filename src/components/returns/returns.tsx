@@ -1,8 +1,10 @@
+import Inner from "../Layout/Inner"
+
 export function Returns() {
     return (
-        <>
-            <div className="px-2 pb-20 sm:px-3 md:px-12  text-white">
-                <header>
+        <Inner>
+            <div className="px-2 pb-20 sm:px-3 md:px-12 text-white min-h-screen flex flex-col items-center justify-center">
+            <header>
                     <h1 className="text-center text-4xl mb-2">
                         {"Clients' Returns"}
                     </h1>
@@ -22,7 +24,7 @@ export function Returns() {
                     </div>
                 </main>
             </div>
-        </>
+        </Inner>
     )
 }
 

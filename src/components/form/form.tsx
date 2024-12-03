@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
 import { div } from "three/examples/jsm/nodes/Nodes.js"
+import Inner from "../Layout/Inner"
 
 export function Form() {
     const [page, setPage] = useState<number>(0)
@@ -17,10 +18,12 @@ export function Form() {
     }
 
     return (
+        < Inner>
         <AnimatePresence initial={false} mode="wait">
             {page == 0 && <FormCover key={"cover"} toggle={toggle} />}
             {page == 1 && <FormInput key={"form"} />}
         </AnimatePresence>
+        </Inner>
     )
 }
 
