@@ -115,9 +115,23 @@
 }
 
 .sun-icon {
-    transition: fill 0.7s;
+    transition: all 0.7s ease-in-out; /* Smooth transition for SVG */
+    transform-origin: center;
 }
 
-.title:hover .sun-icon {
-    fill: #ac42ff;
+.sun-icon path {
+    transition: stroke 0.7s ease-in-out, fill 0.7s ease-in-out;
 }
+/* Hover effect */
+.title:hover .sun-icon path {
+    fill: url(#paint0_linear_122_1915); /* Ensure gradient reference is correct */
+    stroke: url(#paint1_linear_122_1915);
+    /* opacity: 1; Ensure path is visible */
+}
+
+
+/* .title:hover .sun-icon path {
+    fill: url(#paint0_linear_122_1915);
+    stroke: url(#paint1_linear_122_1915);
+} */
+

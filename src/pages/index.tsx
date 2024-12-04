@@ -34,28 +34,11 @@ const sections = [
     { id: "form", component: <Form /> },
 ]
 
-// const sections = [
-//     {
-//         id: "intro",
-//         component: (
-//             <div className="flex items-center justify-center h-full bg-blue-500">
-//                 <h1 className="text-white text-4xl">Intro Section</h1>
-//             </div>
-//         ),
-//     },
-//     {
-//         id: "about",
-//         component: (
-//             <div className="flex items-center justify-center h-full bg-green-500">
-//                 <h1 className="text-white text-4xl">About Section</h1>
-//             </div>
-//         ),
-//     },
-// ];
 
 function Home() {
     return (
         <main className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
+            
             {sections.map((section) => (
                 <section
                     key={section.id}
@@ -67,15 +50,3 @@ function Home() {
         </main>
     );
 }
-
-// function Home() {
-//     return (
-//         <main className="h-screen overflow-y-scroll overflow-x-hidden">
-//             {sections.map((section) => (
-//                 <section key={section.id}>
-//                     {section.component}
-//                 </section>
-//             ))}
-//         </main>
-//     )
-// }

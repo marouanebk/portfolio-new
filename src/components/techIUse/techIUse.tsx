@@ -9,6 +9,7 @@ import { FlutterSVG } from "../../../public/techstack-flutter"
 import { HTMLSVG } from "../../../public/techstack-html5"
 import { CSS3SVG } from "../../../public/icon-techstack/techstack-css"
 import Inner from "../Layout/Inner"
+import { PythonSVG } from "../../../public/icon-techstack/techstack-python"
 
 export default function TechIUse() {
     return (
@@ -30,7 +31,8 @@ export default function TechIUse() {
                     <GitSVG />
                     <FlutterSVG />
                     <GithubSVG />
-                    <PHPSVG />
+                    <PythonSVG/>
+                    {/* <PHPSVG /> */}
                     <MongoDbSVG />
                 </main>
             </div>

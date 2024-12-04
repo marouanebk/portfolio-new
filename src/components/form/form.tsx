@@ -126,13 +126,15 @@ const FormCover = ({ toggle }: { toggle: any }) => {
                             <span className="mr-6 text-6xl lg:text-[6rem]">
                                 {"GET IN"}
                             </span>
-                            <Image
+
+                            <SunIcon  />
+                            {/* <Image
                                 src="/arrow.svg"
                                 width={100}
                                 height={100}
                                 alt=""
                                 className="w-[52px] h-fit lg:h-[75px] lg:w-fit"
-                            />
+                            /> */}
                         </div>
                         <div className="text-stroke text-6xl lg:text-[6rem] ">
                             <span className="mr-6">&lt;/</span>
@@ -140,16 +142,15 @@ const FormCover = ({ toggle }: { toggle: any }) => {
                         </div>
                     </h1>
                 </div>
-                <div className="md:hidden">
-                <SunIcon / >
-                    {/* <Image
+                {/* <div className="md:hidden">
+                    <Image
                         height={100}
                         width={100}
                         src="/sun3.svg"
                         className="absolute bottom-0 w-[90%] left-1/2 -translate-x-1/2 sun-icon"
                         alt=""
-                    /> */}
-                </div>
+                    />
+                </div> */}
             </div>
             {isMouseOver && (
                 <motion.div
