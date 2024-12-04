@@ -27,20 +27,39 @@ const sections = [
         ),
     },
     { id: "about", component: <About /> },
-    // { id: "slider", component: <Slider /> },
-    // { id: "work", component: <Work /> },
-    // { id: "techIUse", component: <TechIUse /> },
-    // { id: "returns", component: <Returns /> },
-    // { id: "form", component: <Form /> },
+    { id: "slider", component: <Slider /> },
+    { id: "work", component: <Work /> },
+    { id: "techIUse", component: <TechIUse /> },
+    { id: "returns", component: <Returns /> },
+    { id: "form", component: <Form /> },
 ]
+
+// const sections = [
+//     {
+//         id: "intro",
+//         component: (
+//             <div className="flex items-center justify-center h-full bg-blue-500">
+//                 <h1 className="text-white text-4xl">Intro Section</h1>
+//             </div>
+//         ),
+//     },
+//     {
+//         id: "about",
+//         component: (
+//             <div className="flex items-center justify-center h-full bg-green-500">
+//                 <h1 className="text-white text-4xl">About Section</h1>
+//             </div>
+//         ),
+//     },
+// ];
 
 function Home() {
     return (
-        <main className="h-screen overflow-y-scroll overflow-x-hidden scroll-snap-y-mandatory">
+        <main className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
             {sections.map((section) => (
                 <section
                     key={section.id}
-                    className="scroll-snap-start h-screen"
+                    className="snap-start h-screen"
                 >
                     {section.component}
                 </section>

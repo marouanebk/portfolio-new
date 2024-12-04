@@ -1,8 +1,11 @@
-import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
-import { useState } from "react"
-import { div } from "three/examples/jsm/nodes/Nodes.js"
-import Inner from "../Layout/Inner"
+"use client";
+import React, { useEffect, useState } from "react";
+import { throttle } from "lodash";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import Inner from "../Layout/Inner";
+import SunIcon from "../../../public/icon-techstack/SunIcon";
+
 
 export function Form() {
     const [page, setPage] = useState<number>(0)
@@ -18,17 +21,59 @@ export function Form() {
     }
 
     return (
-        < Inner>
-        <AnimatePresence initial={false} mode="wait">
-            {page == 0 && <FormCover key={"cover"} toggle={toggle} />}
-            {page == 1 && <FormInput key={"form"} />}
-        </AnimatePresence>
-        </Inner>
+        <div className="h-screen w-full relative snap-start">
+            <Inner>
+                <AnimatePresence initial={false} mode="wait">
+                    {page === 0 && <FormCover key="cover" toggle={toggle} />}
+                    {page === 1 && <FormInput key="form" />}
+                </AnimatePresence>
+            </Inner>
+        </div>
     )
 }
 
 const FormCover = ({ toggle }: { toggle: any }) => {
-    const variants = {
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [cursorVariant, setCursorVariant] = useState("default");
+    const [isMouseOver, setIsMouseOver] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsMouseOver(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsMouseOver(false);
+    };
+
+    useEffect(() => {
+        const mouseMove = throttle((e) => {
+            if (window.innerWidth > 768) {
+                setMousePosition({
+                    x: e.clientX,
+                    y: e.clientY,
+                });
+            }
+        }, 100);
+
+        window.addEventListener("mousemove", mouseMove);
+
+        return () => {
+            window.removeEventListener("mousemove", mouseMove);
+        };
+    }, []);
+
+    // const variants = {
+        // default: {
+        //     x: mousePosition.x - 81,
+        //     y: mousePosition.y - 81,
+        // },
+    // };
+
+        const variants = {
+            default: {
+                x: mousePosition.x - 81,
+                y: mousePosition.y - 81,
+            },
         enter: {
             y: "100%",
         },
@@ -51,12 +96,16 @@ const FormCover = ({ toggle }: { toggle: any }) => {
             exit: "exit",
             variants,
             custom,
-        }
-    }
+        };
+    };
 
     return (
-        <div className="absolute w-screen h-screen overflow-hidden">
-            <div className="stairs--container  w-screen h-screen absolute flex z-10 pointer-events-none">
+        <div
+            className={`absolute w-screen h-screen overflow-hidden form-component`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            <div className="stairs--container w-screen h-screen absolute flex z-10 pointer-events-none">
                 {[...Array(5)].map((_, i) => {
                     return (
                         <motion.div
@@ -64,7 +113,7 @@ const FormCover = ({ toggle }: { toggle: any }) => {
                             className="stairs--column w-full h-full bg-dark relative"
                             {...anim(variants, i)}
                         ></motion.div>
-                    )
+                    );
                 })}
             </div>
             <div
@@ -92,18 +141,30 @@ const FormCover = ({ toggle }: { toggle: any }) => {
                     </h1>
                 </div>
                 <div className="md:hidden">
-                    <Image
+                <SunIcon / >
+                    {/* <Image
                         height={100}
                         width={100}
                         src="/sun3.svg"
-                        className="absolute bottom-0 w-[90%] left-1/2 -translate-x-1/2"
+                        className="absolute bottom-0 w-[90%] left-1/2 -translate-x-1/2 sun-icon"
                         alt=""
-                    />
+                    /> */}
                 </div>
             </div>
+            {isMouseOver && (
+                <motion.div
+                    className="cursor"
+                    variants={variants}
+                    animate={cursorVariant}
+                >
+                    <span className="font-kalnia text-base font-normal leading-5 tracking-normal text-center">
+                        Contact Me
+                    </span>
+                </motion.div>
+            )}
         </div>
-    )
-}
+    );
+};
 
 const FormInput = () => {
     const variants = {

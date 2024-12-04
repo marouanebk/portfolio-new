@@ -5,6 +5,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.snap-y {
+    scroll-snap-type: y mandatory;
+}
+
+.snap-start {
+    scroll-snap-align: start;
+}
+
 html {
     scroll-behavior: smooth;
 }

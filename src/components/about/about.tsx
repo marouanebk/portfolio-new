@@ -46,7 +46,7 @@ const SectionItem = ({ title, description }: SectionItemTypes) => (
 const About = () => (
     <Inner>
         <div
-            className="px-2 sm:px-3 md:px-12 xl:px-20 flex flex-col items-center justify-start py-20 min-h-screen w-full scroll-snap-start" // Added min-h-screen and w-full
+            className="px-2 sm:px-3 md:px-12 xl:px-20 flex flex-col items-center justify-start py-20 min-h-screen w-full scroll-snap-start h-screen" // Added min-h-screen and w-full
             style={{
                 background:
                     "linear-gradient(103.02deg, #2E2E2E 0%, #222222 81.17%)", // bro.. we have tailwind...

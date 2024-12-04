@@ -113,3 +113,11 @@
     -webkit-text-fill-color: transparent;
     background-color: #ac42ff;
 }
+
+.sun-icon {
+    transition: fill 0.7s;
+}
+
+.title:hover .sun-icon {
+    fill: #ac42ff;
+}
