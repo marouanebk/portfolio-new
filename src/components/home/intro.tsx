@@ -79,21 +79,144 @@ export default function Intro() {
                 }
             `}</style>
             <div className="intro flex items-center justify-center relative min-h-screen w-full scroll-snap-start">
-                {/* <Navbar />  */}
+                <Navbar /> 
                 <article className="w-full h-full flex flex-col lg:flex-row gap-5 items-center justify-between my-24 md:my-48 pt-20">
                     {" "}
                     {/* Added pt-20 to make space for fixed Navbar */}
                     <div className="basis-1/3 w-lg max-w-lg flex flex-col gap-4 lg:gap-7 items-center lg:items-start">
-                        <h1 className="text-4xl sm:text-7xl font-normal text-center lg:text-left w-full text-white">
+                    <motion.h1 
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="text-4xl sm:text-7xl font-normal text-center lg:text-left w-full text-white"
+                        >
+                            Merouane Boukandoura.
+                        </motion.h1>
+                        <motion.div 
+                            initial={{ opacity: 0, width: 0 }}
+                            animate={{ opacity: 1, width: "2.75rem" }}
+                            transition={{ duration: 0.4, delay: 0.3 }}
+                            className="h-2 bg-gradientPurple rounded"
+                        />
+
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                            className="flex items-center justify-start gap-3"
+                        >
+                            <GithubContactSVG />
+                            <div className="cont-svg-icon">
+                                <motion.img
+                                    initial={{ opacity: 0, scale: 0.5 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.3, delay: 0.7 }}
+                                    className="svg-icon"
+                                    src="/github-icon.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="cont-svg-icon">
+                                <motion.img
+                                    initial={{ opacity: 0, scale: 0.5 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.3, delay: 0.8 }}
+                                    className="svg-icon"
+                                    src="/email-icon.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="cont-svg-icon">
+                                <motion.img
+                                    initial={{ opacity: 0, scale: 0.5 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.3, delay: 0.9 }}
+                                    className="svg-icon"
+                                    src="/facebook-icon.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="cont-svg-icon">
+                                <motion.img
+                                    initial={{ opacity: 0, scale: 0.5 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.3, delay: 1 }}
+                                    className="svg-icon"
+                                    src="/instagram-icon.svg"
+                                    alt=""
+                                />
+                            </div>
+                        </motion.div>
+                    </div>
+                    <motion.div 
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="basis-1/3 text-center lg:text-start"
+                    >
+                        <motion.h2 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.4, delay: 0.6 }}
+                            className="text-xl text-white"
+                        >
+                            Backend & Mobile developer
+                        </motion.h2>
+                        <motion.p 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.4, delay: 0.8 }}
+                            className="text-grayText mb-3"
+                        >
+                            Lorem ipsum dolor sit amet consectetur. Velit
+                            egestas sed fermentum lobortis dui. Vitae sit d vel.
+                            Massa id elementum porttitor suspendisse.
+                        </motion.p>
+
+                        <motion.p 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.4, delay: 1 }}
+                            className="text-grayText"
+                        >
+                            Lorem ipsum dolor sit amet consectetur. Velit
+                            egestas sed fermentum lobortis dui. Vitae sit velit
+                            tristique purus. Consequat vitae cursus augue turpis
+                            gravida fringilla at. Suspendisse d etiam enim
+                            adipiscing vel. Massa id elementum porttitor
+                            suspendisse.
+                        </motion.p>
+
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 1.2 }}
+                            className="flex gap-5 items-center my-5 justify-center lg:justify-normal"
+                        >
+                            <a href="#" className="">
+                                <button className="bg-gradientPurple text-white px-3.5 py-1 rounded-2xl">
+                                    DOWNLOAD CV
+                                </button>
+                            </a>
+                            <a
+                                href=""
+                                className="gradient-text-purple relative before:absolute before:left-0 before:-bottom-[0.3px] before:w-full before:h-px before:bg-gradientPurple h-fit"
+                            >
+                                START A PROJECT
+                            </a>
+                        </motion.div>
+                    </motion.div>
+                </article>
+                        {/* <h1 className="text-4xl sm:text-7xl font-normal text-center lg:text-left w-full text-white">
                             Merouane Boukandoura.
                         </h1>
                         <div className="h-2 w-11 bg-gradientPurple rounded"></div>
 
                         <div className="flex items-center justify-start gap-3">
-                            {/* <div className="cont-svg-icon"> */}
+
 
                             <GithubContactSVG />
-                            {/* </div> */}
+
 
                             <div className="cont-svg-icon">
                                 <img
@@ -159,7 +282,7 @@ export default function Intro() {
                             </a>
                         </div>
                     </div>
-                </article>
+                </article> */}
                 <article>
                     <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2">
                         <motion.img

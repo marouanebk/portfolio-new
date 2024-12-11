@@ -127,7 +127,7 @@ const FormCover = ({ toggle }: { toggle: any }) => {
                                 {"GET IN"}
                             </span>
 
-                            <SunIcon  />
+                            <SunIcon className="w-[52px] h-fit lg:h-[75px] lg:w-fit" />
                             {/* <Image
                                 src="/arrow.svg"
                                 width={100}
@@ -142,7 +142,7 @@ const FormCover = ({ toggle }: { toggle: any }) => {
                         </div>
                     </h1>
                 </div>
-                {/* <div className="md:hidden">
+                <div className="md:hidden">
                     <Image
                         height={100}
                         width={100}
@@ -150,7 +150,7 @@ const FormCover = ({ toggle }: { toggle: any }) => {
                         className="absolute bottom-0 w-[90%] left-1/2 -translate-x-1/2 sun-icon"
                         alt=""
                     />
-                </div> */}
+                </div>
             </div>
             {isMouseOver && (
                 <motion.div

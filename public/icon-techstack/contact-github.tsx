@@ -23,6 +23,12 @@ export function GithubContactSVG() {
             viewBox="0 0 44 44"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            style={{
+                transition: "transform 0.3s",
+                transform: hover ? "scale(1.15)" : "scale(1)",
+                transformOrigin: "center center",
+            }}
+
         >
             {/* <g filter={hover ? `url(#${filterId})` : "none"}>
                 <rect
@@ -133,7 +139,7 @@ export function GithubContactSVG() {
                     y2="44.4771"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#D7A3FF" />
+                    <stop stopColor="#D7A3FF" />
                     <stop offset="1" stop-color="#AC42FF" />
                 </linearGradient>
                 {/* <linearGradient

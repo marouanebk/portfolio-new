@@ -38,7 +38,7 @@ const sections = [
 function Home() {
     return (
         <main className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
-            
+
             {sections.map((section) => (
                 <section
                     key={section.id}

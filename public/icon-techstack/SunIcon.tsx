@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SunIcon = () => {
+const SunIcon = ({ className }: { className?: string }) => {
     return (
         <svg
             width="72"
@@ -8,7 +8,7 @@ const SunIcon = () => {
             viewBox="0 0 72 72"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="sun-icon"
+            className={`sun-icon ${className}`}
         >
             <path
                 fillRule="evenodd"

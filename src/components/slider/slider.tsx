@@ -32,10 +32,10 @@ export function Slider() {
         }
         if (firstText) gsap.set(firstText.current, { xPercent: xPercent })
         if (secoundText) gsap.set(secoundText.current, { xPercent: xPercent })
-        xPercent += 0.04 * direction
+        xPercent += 0.02 * direction  // Changed from 0.04 to 0.02
         requestAnimationFrame(animation)
     }
-
+    
     const animation2 = () => {
         if (xPercent2 <= -100) {
             xPercent2 = 0
@@ -44,12 +44,10 @@ export function Slider() {
             xPercent2 = -100
         }
         if (firstText2) gsap.set(firstText2.current, { xPercent: xPercent2 })
-        if (secoundText2)
-            gsap.set(secoundText2.current, { xPercent: xPercent2 })
-        xPercent2 += 0.04 * direction2
+        if (secoundText2) gsap.set(secoundText2.current, { xPercent: xPercent2 })
+        xPercent2 += 0.02 * direction2  // Changed from 0.04 to 0.02
         requestAnimationFrame(animation2)
     }
-
     return (
         <div className="relative w-screen h-[18rem] overflow-hidden -mt-[6rem]">
             <div className="slider--container slider--container--1 -rotate-[8deg] md:-rotate-3">
