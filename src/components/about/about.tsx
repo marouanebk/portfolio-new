@@ -24,7 +24,7 @@ const Card = ({ title, number, delay = 0 }: CardTypes & { delay?: number }) => {
             if (entry.isIntersecting) {
                 // Start animation when card is visible
                 let start = 0
-                const duration = 4000 // 2 seconds
+                const duration = 3000 // 2 seconds
                 const step = (timestamp: number) => {
                     if (!start) start = timestamp
                     const progress = timestamp - start
