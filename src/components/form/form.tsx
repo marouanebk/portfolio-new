@@ -167,6 +167,95 @@ const FormCover = ({ toggle }: { toggle: any }) => {
     );
 };
 
+// const FormInput = () => {
+//     const variants = {
+//         enter: {
+//             y: "0",
+//         },
+//         animate: (i: number) => ({
+//             y: "100%",
+//             transition: {
+//                 duration: 0.4,
+//                 delay: 0.1 * i,
+//             },
+//         }),
+//         exit: () => ({
+//             y: "0",
+//         }),
+//     }
+
+//     const anim = (variants: any, custom: number) => {
+//         return {
+//             initial: "enter",
+//             animate: "animate",
+//             exit: "exit",
+//             variants,
+//             custom,
+//         }
+//     }
+
+//     return (
+//         <div className="absolute w-screen h-screen overflow-hidden"             style={{
+//             background: 'linear-gradient(180deg, #2E2E2E 0%, #222222 100%)',
+//         }}
+// >
+//             <div className="stairs--container  w-screen h-screen absolute flex z-10 pointer-events-none">
+//                 {[...Array(5)].map((_, i) => {
+//                     return (
+//                         <motion.div
+//                             key={i}
+//                             className="stairs--column w-full h-full bg-dark relative"
+//                             {...anim(variants, i)}
+//                         ></motion.div>
+//                     )
+//                 })}
+//             </div>
+//             <motion.div className="flex items-center justify-center bg-black min-h-screen">
+//                 <div className="container  mx-auto px-4 py-8">
+//                     <div className="border border-gray-300 rounded-lg p-6 max-w-full md:max-w-2xl lg:max-w-3xl mx-auto">
+//                         <h2 className="text-white text-4xl font-normal mb-2 kalnia-font text-center">
+//                             GET IN TOUCH
+//                         </h2>
+//                         <p className=" text-gray-500 text-base font-normal leading-5 tracking-normal text-center mb-8">
+//                             Leave your details bellow and lets start working on
+//                             your next big project.
+//                         </p>
+
+//                         <form className=" myForm grid grid-cols-1 md:grid-cols-2 gap-4">
+//                             <input
+//                                 className="bg-gray-800 text-white p-2 mb-4 w-full"
+//                                 type="text"
+//                                 placeholder="First Name"
+//                             />
+//                             <input
+//                                 className="bg-gray-800 text-white p-2 mb-4 w-full"
+//                                 type="text"
+//                                 placeholder="Last Name"
+//                             />
+//                             <input
+//                                 className="bg-gray-800 text-white p-2 mb-4 w-full"
+//                                 type="email"
+//                                 placeholder="Email"
+//                             />
+//                             <input
+//                                 className="bg-gray-800 text-white p-2 mb-4 w-full"
+//                                 type="text"
+//                                 placeholder="Enterprise"
+//                             />
+//                             <textarea
+//                                 className="bg-gray-800 text-white p-2 mb-4 w-full md:col-span-2"
+//                                 placeholder="Message"
+//                             ></textarea>
+//                             <button className="md:col-span-2 mx-auto bg-purple-500 text-white p-2 px-4 py-2 rounded">
+//                                 SEND THE MESSAGE
+//                             </button>
+//                         </form>
+//                     </div>
+//                 </div>
+//             </motion.div>
+//         </div>
+//     )
+// }
 const FormInput = () => {
     const variants = {
         enter: {
@@ -182,7 +271,7 @@ const FormInput = () => {
         exit: () => ({
             y: "0",
         }),
-    }
+    };
 
     const anim = (variants: any, custom: number) => {
         return {
@@ -191,34 +280,36 @@ const FormInput = () => {
             exit: "exit",
             variants,
             custom,
-        }
-    }
+        };
+    };
 
     return (
-        <div className="absolute w-screen h-screen overflow-hidden">
-            <div className="stairs--container  w-screen h-screen absolute flex z-10 pointer-events-none">
-                {[...Array(5)].map((_, i) => {
-                    return (
-                        <motion.div
-                            key={i}
-                            className="stairs--column w-full h-full bg-dark relative"
-                            {...anim(variants, i)}
-                        ></motion.div>
-                    )
-                })}
+        <div
+            className="absolute w-screen h-screen overflow-hidden"
+            style={{
+                background: 'linear-gradient(180deg, #2E2E2E 0%, #222222 100%)',
+            }}
+        >
+            <div className="stairs--container w-screen h-screen absolute flex z-10 pointer-events-none">
+                {[...Array(5)].map((_, i) => (
+                    <motion.div
+                        key={i}
+                        className="stairs--column w-full h-full bg-dark relative"
+                        {...anim(variants, i)}
+                    ></motion.div>
+                ))}
             </div>
             <motion.div className="flex items-center justify-center bg-black min-h-screen">
-                <div className="container  mx-auto px-4 py-8">
+                <div className="container mx-auto px-4 py-8">
                     <div className="border border-gray-300 rounded-lg p-6 max-w-full md:max-w-2xl lg:max-w-3xl mx-auto">
                         <h2 className="text-white text-4xl font-normal mb-2 kalnia-font text-center">
                             GET IN TOUCH
                         </h2>
-                        <p className=" text-gray-500 text-base font-normal leading-5 tracking-normal text-center mb-8">
-                            Leave your details bellow and lets start working on
-                            your next big project.
+                        <p className="text-gray-500 text-base font-normal leading-5 tracking-normal text-center mb-8">
+                            Leave your details below and lets start working on your next big project.
                         </p>
 
-                        <form className=" myForm grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <form className="myForm grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input
                                 className="bg-gray-800 text-white p-2 mb-4 w-full"
                                 type="text"
@@ -243,13 +334,16 @@ const FormInput = () => {
                                 className="bg-gray-800 text-white p-2 mb-4 w-full md:col-span-2"
                                 placeholder="Message"
                             ></textarea>
-                            <button className="md:col-span-2 mx-auto bg-purple-500 text-white p-2 px-4 py-2 rounded">
+                            <button className="bg-gradientPurple md:col-span-2 mx-auto bg-purple-500 text-white px-4 py-2 rounded-3xl">
                                 SEND THE MESSAGE
                             </button>
+                            {/* <button className="bg-gradientPurple text-white px-3.5 py-1 rounded-2xl">
+                                SEND THE MESSAGE
+                            </button> */}
                         </form>
                     </div>
                 </div>
             </motion.div>
         </div>
-    )
-}
+    );
+};

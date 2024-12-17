@@ -158,7 +158,7 @@ export default function Intro() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.4, delay: 0.6 }}
-                            className="text-xl text-white"
+                            className="text-2xl text-white"
                         >
                             Backend & Mobile developer
                         </motion.h2>
@@ -166,7 +166,9 @@ export default function Intro() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.4, delay: 0.8 }}
-                            className="text-grayText mb-3"
+                            className="text-grayText mb-3 "
+                            style={{ fontSize: '1.1rem' }}  
+
                         >
                             Lorem ipsum dolor sit amet consectetur. Velit
                             egestas sed fermentum lobortis dui. Vitae sit d vel.
@@ -178,6 +180,7 @@ export default function Intro() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.4, delay: 1 }}
                             className="text-grayText"
+                            style={{ fontSize: '1.1rem' }}  
                         >
                             Lorem ipsum dolor sit amet consectetur. Velit
                             egestas sed fermentum lobortis dui. Vitae sit velit
