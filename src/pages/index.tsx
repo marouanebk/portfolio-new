@@ -26,11 +26,11 @@ const sections = [
             </Cont>
         ),
     },
-    // { id: "about", component: <About /> },
-    // { id: "slider", component: <Slider /> },
-    // { id: "work", component: <Work /> },
-    // { id: "techIUse", component: <TechIUse /> },
-    // { id: "returns", component: <Returns /> },
+     { id: "about", component: <About /> },
+     //{ id: "slider", component: <Slider /> },
+     { id: "work", component: <Work /> },
+     { id: "techIUse", component: <TechIUse /> },
+     { id: "returns", component: <Returns /> },
     { id: "form", component: <Form /> },
 ]
 

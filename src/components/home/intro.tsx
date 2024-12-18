@@ -53,6 +53,7 @@ export default function Intro() {
                     position: relative;
                 }
                 .cont-svg-icon::before {
+                    z-index: -1;
                     content: "";
                     transition:
                         0.3s ease,
@@ -105,7 +106,7 @@ export default function Intro() {
                             transition={{ duration: 0.6, delay: 0.6 }}
                             className="flex items-center justify-start gap-3"
                         >
-                            <GithubContactSVG />
+                            
                             <div className="cont-svg-icon">
                                 <motion.img
                                     initial={{ opacity: 0, scale: 0.5 }}

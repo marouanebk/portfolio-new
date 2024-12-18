@@ -253,7 +253,7 @@ const Navbar = () => {
     }, [isDarkMode])
 
     return (
-        <nav className={`fixed top-0 left-0 w-full my-4 text-grayText ${isDarkMode ? 'bg-purple-500' : 'bg-white'}`}>
+        <nav className={`absolute top-0 left-0 w-full my-4 text-grayText ${isDarkMode ? 'bg-purple-500' : 'bg-white'}`}>
             <ul className="flex gap-5 w-full justify-center px-9 text-base items-center">
                 <li>
                     <Link href="/" className="text-white">

@@ -8,7 +8,7 @@ const SingleReturn = ({ delay = 0 }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay }}
-            className="transition before:transition after:transition before:shadow-sm before:hover:shadow-purple max-w-[430px] md:w-[530px] lg:min-w-[500px] text-center p-5 border-2 border-grayText hover:border-purple hover:before:bg-purple  rounded-2xl bg-linearBlack relative before:w-[40%] before:absolute before:left-1/2 before:-bottom-[14px] before:h-[25px] before:bg-grayText before:rounded-full before:-translate-x-1/2 before:-z-10 after:w-full after:h-full after:top-0 after:left-0 hover:after:bg-purple after:absolute after:rounded-2xl after:filter after:blur-lg after:-z-10"
+            className="after:-z-10 after:transition  before:shadow-sm before:hover:shadow-purple max-w-[430px] md:w-[530px] lg:min-w-[500px] text-center p-5 border-2 border-grayText hover:border-purple hover:before:bg-purple  rounded-2xl bg-linearBlack relative before:w-[40%] before:absolute before:left-1/2 before:-bottom-[14px] before:h-[25px] before:bg-grayText before:rounded-full before:-translate-x-1/2 before:-z-10 after:w-full after:h-full after:top-0 after:left-0 hover:after:bg-purple after:absolute after:rounded-2xl after:filter after:blur-lg"
         >
             <p className="mb-3 leading-6 text-lg">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.

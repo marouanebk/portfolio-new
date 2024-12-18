@@ -3,6 +3,7 @@ import Cont from "../../components/cont"
 import Inner from "@/components/Layout/Inner"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { Slider } from "../slider/slider"
 
 type CardTypes = {
     title: string
@@ -29,7 +30,7 @@ const Card = ({ title, number, delay = 0 }: CardTypes & { delay?: number }) => {
                     if (!start) start = timestamp
                     const progress = timestamp - start
                     const percentage = Math.min(progress / duration, 1)
-                    
+
                     // Easing function for smooth animation
                     const easeOutQuad = 1 - Math.pow(1 - percentage, 2)
                     setCount(Math.floor(easeOutQuad * number))
@@ -41,7 +42,7 @@ const Card = ({ title, number, delay = 0 }: CardTypes & { delay?: number }) => {
                     }
                 }
                 requestAnimationFrame(step)
-                
+
                 // Cleanup observer after animation starts
                 observer.current?.disconnect()
             }
@@ -96,7 +97,7 @@ const SectionItem = ({ title, description, delay = 0 }: SectionItemTypes & { del
             />
         </div>
         <div>
-        <h3 className="text-xl font-normal text-white font-Dosis">
+            <h3 className="text-xl font-normal text-white font-Dosis">
                 {title}
             </h3>
             <p className="text-lg text-grayText font-Dosis">{description}</p>
@@ -106,6 +107,7 @@ const SectionItem = ({ title, description, delay = 0 }: SectionItemTypes & { del
 
 const About = () => (
     <Inner>
+
         <div
             className="px-2 sm:px-3 md:px-12 xl:px-20 flex flex-col items-center justify-start py-20 min-h-screen w-full scroll-snap-start h-screen"
             style={{
@@ -117,7 +119,7 @@ const About = () => (
                 <Card title="Years of Experience" number={4} delay={0.4} />
                 <Card title="Worldwide Clients" number={10} delay={0.6} />
             </div>
-            
+
             <div className="min-w-full flex justify-around flex-col lg:flex-row gap-8 my-12 mt-28 px-3">
                 <div className="max-w-[568px]">
                     <motion.h1 
